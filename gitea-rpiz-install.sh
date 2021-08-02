@@ -666,7 +666,7 @@ if (whiptail --title " EXTENDED CONFIG " --yesno "Would you like to apply the ex
     # Write the gitea-rpiz Customizer Desktop Launcher File
     giteaDesktopLauncherName="Gitea Customizer"
     giteaDesktopLauncherComment="Configure Gitea for Raspberry Pi Zero"
-    giteaDesktopLauncherExec='gitea-rpiz-custom.sh"'
+    giteaDesktopLauncherExec='bash "gitea-rpiz-custom.sh"'
     giteaDesktopLauncherIcon="${giteaInstallPath}/gitea/custom/public/img/logo.svg"
     giteaDesktopLauncherFile="gitea-rpiz-custom.desktop"
     ##################################################
