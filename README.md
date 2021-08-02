@@ -2,7 +2,7 @@
 
 [![Codacy Security Scan](https://github.com/trainingmode/gitea-rpiz/actions/workflows/codacy-analysis.yml/badge.svg)](https://github.com/trainingmode/gitea-rpiz/actions/workflows/codacy-analysis.yml)
 
-
+![gitea-rpiz_Demo](https://user-images.githubusercontent.com/52793789/127861891-2999d5ee-a5b9-412e-8a18-2c61feea1f0c.gif)
 
 -----
 
@@ -145,7 +145,7 @@ Raspberry Pi Zero users that would like a quick and easy way to install a privat
 
 Below is a walkthrough (no audio) demonstrating the installation, configuration, backup/restore, and uninstallation processes.
 
-
+https://user-images.githubusercontent.com/52793789/127908512-2f685fd3-e337-48eb-ac78-5bc164872401.mp4
 
 ## Install
 
