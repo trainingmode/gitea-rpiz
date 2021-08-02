@@ -174,7 +174,7 @@ if [[ $dialogExit != 0 ]]; then exit; fi
 ##################################################
 
 # Move to the Gitea Application Directory
-pushd $(dirname "${giteaAppDir}") > /dev/null 2>&1 || return
+pushd "$(dirname "${giteaAppDir}")" > /dev/null 2>&1 || return
 while true; do
     ##################################################
     TERM=ansi whiptail --title " DOWNLOADING GITEA ${wmenuGiteaInstall} " --infobox "Downloading Gitea version ${wmenuGiteaInstall}..." 0 0
@@ -360,12 +360,9 @@ whiptailInputPathCreate() {
 ##################################################
 giteaInstallPath="/var/lib" # Initialize the Default Gitea Recommended Installation Directory
 giteaRepoPath="/home/git/repositories" # Initialize the Default Gitea Repositories Directory
-useExternalStorage="n" # Initialize as Not Using External Storage
 ##################################################
 # Create the Gitea Working Directory
 if (whiptail --title " EXTERNAL STORAGE " --yesno "Would you like to use external storage?\nPlease set this up now to direct Gitea to the correct locations." 0 0 --yes-button "YES" --no-button "NO" 3>&1 1>&2 2>&3); then
-    # Flag as Using External Storage
-    useExternalStorage="y"
     ##################################################
     # Whiptail Input Path Dialog for the External Storage Path
     whiptailInputPathCreate -d "EXTERNAL STORAGE" "Please enter the full path to your desired Gitea root directory.\nThe /gitea and /repositories folders will be created there.\n  - /gitea is the Gitea working folder.\n  - /repositories stores git repositories.\n| EXAMPLE: /mnt/MyDrive"
@@ -670,7 +667,7 @@ if (whiptail --title " EXTENDED CONFIG " --yesno "Would you like to apply the ex
     giteaDesktopLauncherName="Gitea Customizer"
     giteaDesktopLauncherComment="Configure Gitea for Raspberry Pi Zero"
     giteaDesktopLauncherExec='gitea-rpiz-custom.sh"'
-    giteaDesktopLauncherIcon="${giteaDirectory}/custom/public/img/logo.svg"
+    giteaDesktopLauncherIcon="${giteaInstallPath}/gitea/custom/public/img/logo.svg"
     giteaDesktopLauncherFile="gitea-rpiz-custom.desktop"
     ##################################################
     giteaDesktopLauncherCategory="Gitea;"
